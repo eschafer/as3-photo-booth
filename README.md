@@ -1,2 +1,2 @@
-air-photo-booth
+AS3 Photo Booth
 ===============
