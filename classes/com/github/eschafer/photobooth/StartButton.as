@@ -1,4 +1,4 @@
-package com.eliz.photobooth {
+package com.github.eschafer.photobooth {
 	import flash.display.Sprite;
 
 	/**
