@@ -8,7 +8,7 @@ package com.github.eschafer.photobooth {
 		public function PhotoFlash() {
 			this.stop();
 		}
-		
+
 		public function flash():void {
 			this.gotoAndPlay(1);
 		}

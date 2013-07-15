@@ -6,7 +6,7 @@ package com.github.eschafer.photobooth {
 	 */
 	public class StartButton extends Sprite {
 		public function StartButton() {
-			
+
 		}
 	}
 }
