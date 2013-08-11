@@ -30,10 +30,12 @@ package com.github.eschafer.photobooth {
 		}
 
 		protected function initVideo():void {
+			stage.addEventListener(Event.RESIZE, resizeHandler);
+			stage.addEventListener(FullScreenEvent.FULL_SCREEN, resizeHandler);
+
 			stage.displayState = StageDisplayState.FULL_SCREEN;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
-			stage.addEventListener(Event.RESIZE, resizeHandler);
 
 			camera = Camera.getCamera();
 			camera.setQuality(0, 100);
