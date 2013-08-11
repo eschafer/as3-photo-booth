@@ -188,7 +188,7 @@ package com.github.eschafer.photobooth {
 		}
 
 		protected function saveImage(byteArray:ByteArray, index:Number, date:String):void {
-			var directory:File = File.documentsDirectory.resolvePath("Wedding Photo Booth");
+			var directory:File = File.documentsDirectory.resolvePath("Party Photo Booth");
 			if (!directory.exists) {
 				directory.createDirectory();
 			}
