@@ -44,7 +44,7 @@ package com.github.eschafer.photobooth {
 			startButton.buttonMode = true;
 			startButton.addEventListener(MouseEvent.CLICK, startButtonClickHandler);
 			startButton.x = (960 - startButton.width) / 2;
-			startButton.y = 660;
+			startButton.y = 670;
 			addChild(startButton);
 
 			countdownAnimation = new CountdownAnimation();
@@ -61,7 +61,7 @@ package com.github.eschafer.photobooth {
 
 			savingAnimation = new SavingAnimation();
 			savingAnimation.x = (960 - savingAnimation.width) / 2;
-			savingAnimation.y = 660;
+			savingAnimation.y = 670;
 			savingAnimation.addEventListener("OPEN", savingAnimationOpenHandler);
 			savingAnimation.addEventListener("CLOSE", savingAnimationCloseHandler);
 			addChild(savingAnimation);
@@ -106,7 +106,7 @@ package com.github.eschafer.photobooth {
 			resultsMask.graphics.beginFill(0x000000, 1);
 			resultsMask.graphics.drawRect(0, 0, 800, 600);
 			resultsMask.x = 80;
-			resultsMask.y = 30;
+			resultsMask.y = 60;
 			results.mask = resultsMask;
 
 			var background:Sprite = new Sprite();
@@ -143,11 +143,11 @@ package com.github.eschafer.photobooth {
 			results.addChild(bitmap4);
 
 			results.x = 80;
-			results.y = -610;
+			results.y = -590;
 			addChild(results);
 			addChild(resultsMask);
 
-			new Tween(results, "y", Strong.easeOut, results.y, 30, 1, true);
+			new Tween(results, "y", Strong.easeOut, results.y, 60, 1, true);
 
 			intervalId = setInterval(encodeImages, 1000);
 		}

@@ -1,7 +1,7 @@
 <?xml version ="1.0" encoding="utf-8" ?>
 <application xmlns="http://ns.adobe.com/air/application/1.5">
 	<id>com.github.eschafer.as3-photo-booth</id>
-	<version>1.1</version>
+	<version>1.2</version>
 	<filename>Party Photo Booth</filename>
 	<description></description>
 	<!-- To localize the description, use the following format for the description element.

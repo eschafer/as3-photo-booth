@@ -47,7 +47,7 @@ package com.github.eschafer.photobooth {
 				video.scaleX = -.625;
 				video.scaleY = .625;
 				video.x = 80 + video.width;
-				video.y = 30;
+				video.y = 60;
 				addChild(video);
 			} else {
 				trace("You need a camera.");
