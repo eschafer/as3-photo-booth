@@ -15,7 +15,7 @@ package com.github.eschafer.photobooth {
 		public var oneIcon:Sprite;
 		public var twoIcon:Sprite;
 		public var threeIcon:Sprite;
-		public var cameraIcon:Sprite;
+		public var cameraIcon:MovieClip;
 		protected var intervalId:int;
 		protected var sound:Sound;
 
@@ -59,7 +59,7 @@ package com.github.eschafer.photobooth {
 
 		protected function one():void {
 			clearInterval(intervalId);
-			intervalId = setInterval(camera, 1000);
+			intervalId = setInterval(camera1, 1000);
 
 			threeIcon.alpha = .5;
 			twoIcon.alpha = .5;
@@ -69,8 +69,11 @@ package com.github.eschafer.photobooth {
 			sound.play();
 		}
 
-		protected function camera():void {
+		protected function camera1():void {
 			clearInterval(intervalId);
+			intervalId = setInterval(camera2, 1000);
+
+			cameraIcon.gotoAndStop(2);
 
 			threeIcon.alpha = .5;
 			twoIcon.alpha = .5;
@@ -78,6 +81,41 @@ package com.github.eschafer.photobooth {
 			cameraIcon.alpha = 1;
 
 			dispatchEvent(new Event("COMPLETE"));
+		}
+
+		protected function camera2():void {
+			clearInterval(intervalId);
+			intervalId = setInterval(camera3, 1000);
+
+			cameraIcon.gotoAndStop(3);
+
+			threeIcon.alpha = .5;
+			twoIcon.alpha = .5;
+			oneIcon.alpha = .5;
+			cameraIcon.alpha = 1;
+		}
+
+		protected function camera3():void {
+			clearInterval(intervalId);
+			intervalId = setInterval(camera4, 1000);
+
+			cameraIcon.gotoAndStop(4);
+
+			threeIcon.alpha = .5;
+			twoIcon.alpha = .5;
+			oneIcon.alpha = .5;
+			cameraIcon.alpha = 1;
+		}
+
+		protected function camera4():void {
+			clearInterval(intervalId);
+
+			cameraIcon.gotoAndStop(5);
+
+			threeIcon.alpha = .5;
+			twoIcon.alpha = .5;
+			oneIcon.alpha = .5;
+			cameraIcon.alpha = 1;
 		}
 	}
 }
